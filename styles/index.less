@@ -9,10 +9,11 @@ header {
 
 .header {
   max-width: 1200px;
-  width: 100%;
-  height: 80px;
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
   justify-content: space-between;
   z-index: 1;
 
@@ -39,23 +40,44 @@ header {
         color: @color_black_weak;
         font-size: 17px;
         font-weight: 300;
+        padding: 6px 0;
+        transition: 0s;
+      }
+
+      a:hover {
+        border-bottom: 2px solid @color_black_weak;
       }
 
       .header__menu--selected {
         font-weight: 400;
+        border-bottom: 2px solid @color_black_weak;
       }
     }
   }
 
   .header__buttons {
-    display: flex;
-
-    .header__button__login, .header__button__theme {
+    .header__button__login {
+      display: flex;
+      align-items: center;
       font-size: 25px;
       margin-left: 10px;
       color: @color_black_weak;
 
-      .header__button__login__icon:hover, .header__button__theme__icon:hover {
+      p {
+        font-size: 17px;
+        font-weight: 300;
+        margin-right: 10px;
+      }
+
+      a {
+        font-weight: 400;
+      }
+
+      img {
+        width: 25px;
+      }
+
+      img:hover {
         cursor: pointer;
       }
     }
@@ -92,6 +114,7 @@ header {
           font-weight: 800;
           letter-spacing: 1px;
           left: -3px;
+          margin-bottom: 5px;
         }
 
         p:nth-of-type(2) {
@@ -106,21 +129,20 @@ header {
           font-weight: 300;
           letter-spacing: 1px;
           text-align: justify;
-          line-height: 1.3;
+          line-height: 1.5;
         }
 
         .main-banner__content__intro__text--divisor {
           background-color: @color_black_weak;
           width: 60px;
           height: 3px;
-          margin: 20px 0;
+          margin: 25px 0;
         }
       }
     }
   }
 
   .main-banner__background__right {
-    // background-color: yellow;
     position: relative; 
     width: 360px;
     height: 100%;
@@ -138,17 +160,20 @@ header {
     }
 
     .main-banner__content__image {
-      // background-color: @color_blue_weak;
-      // background-color: #7dbee680;
       position: absolute;
       display: flex;
       align-items: center; 
       width: 100%;
       height: 100%;
+      transform: translateX(-50%);
 
       img {
         max-width: 400px;
-        transform: translateX(-50%);
+      }
+
+      img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
       }
     }
   }
