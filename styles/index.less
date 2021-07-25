@@ -205,14 +205,11 @@
       margin-top: 40px;
 
       .color-banner__content__card-left, .color-banner__content__card-right {
+        position: relative;
         width: 280px;
         height: 450px;
-      }
 
-      .color-banner__content__card-left {
-        position: relative;
-
-        .color-banner__content__card-left__background {
+        .color-banner__content__card__background {
           position: absolute;
           width: 100%;
           height: 100%;
@@ -222,7 +219,7 @@
           opacity: 0.1;
         }
 
-        .color-banner__content__card-left__content {
+        .color-banner__content__card__content {
           position: absolute;
           display: flex;
           flex-direction: column;
@@ -233,7 +230,7 @@
           img {
             position: relative;
             width: 400px;
-            left: -10px;
+            left: -60px;
             transition: 0.4s;
           }
     
@@ -242,7 +239,28 @@
           }
 
           div {
-            .color-banner__content__card-left__content__colors {
+            .color-banner__content__card__content__title {
+              margin: 3px 0 30px 0;
+              transition: 0.4s;
+              opacity: 0;
+
+              p {
+                font-size: 16px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                text-align: center;
+                text-transform: uppercase;
+                text-shadow: 0 0 10px rgba(180, 180, 180, 0.6);
+              }
+
+              p:nth-last-of-type(2) {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 5px;
+              }
+            }
+
+            .color-banner__content__card__content__colors {
               display: flex;
               justify-content: center;
               width: 100%;
@@ -270,56 +288,19 @@
           }
         }
       }
-  
+
       .color-banner__content__card-right {
-        position: relative;
+        // outline: 2px solid rgb(170, 170, 170);
         margin-left: 100px;
 
-        .color-banner__content__card-right__background {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-image: url('/S1000RR_Presentation_Website/images/s1000rr-red.jpg');
-          background-size: cover;
-          background-position: center;
-          opacity: 0.1;
-        }
-
-        .color-banner__content__card-right__content {
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          width: 280px;
-          height: 100%;
-
+        .color-banner__content__card__content {
           img {
-            position: relative;
             width: 420px;
-            left: -10px;
-            transition: 0.4s;
-          }
-
-          img:hover {
-            transform: scale(1.1);
+            left: -65px;
           }
 
           div {
-            .color-banner__content__card-right__content__colors {
-              display: flex;
-              justify-content: center;
-              width: 100%;
-              height: 30px;
-              margin-bottom: 30px;
-
-              .color-1, .color-2, .color-3 {
-                width: 30px;
-                height: 100%;
-                border-radius: 50%;
-                margin: 0 5px;
-                box-shadow: 0 0 10px rgba(219, 219, 219, 0.6);
-              }
-
+            .color-banner__content__card__content__colors {
               .color-1 {
                 background-color: @color_white;
               }
@@ -337,6 +318,141 @@
   }
 }
 
+// ---------------------------------------------- BANNER DO MOTOR
+
+.engine-banner {
+  // outline: 2px solid black;
+  display: flex;
+
+  .engine-banner__background__left {
+    position: relative;
+    width: 300px;
+    height: 100%;
+
+    .engine-banner__background__left__background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('/S1000RR_Presentation_Website/images/s1000rr-engine.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+    }
+
+    .engine-banner__background__left__image {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      img {
+        transition: 0.4s;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .engine-banner__background__right {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 300px);
+    height: 100%;
+
+    .engine-banner__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 620px;
+
+      p {
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: right;
+        margin-top: 40px;
+      }
+
+      .engine-banner__content__engine-specification {
+        background-image: linear-gradient(to left, rgba(185, 185, 185, 0.1) , rgba(0, 0, 0, 0));
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 20px;
+        padding-right: 20px;
+
+        p {
+          margin: 0;
+        }
+
+        p:nth-of-type(1) {
+          font-size: 18px;
+          font-weight: 300;
+        }
+
+        p:nth-of-type(2) {
+          font-weight: 500;
+          font-size: 30px;
+        }
+
+        .engine-banner__content__engine-specification--divisor {
+          background-color: @color_black_weak;
+          width: 2px;
+          height: 40%;
+          margin: 0 20px;
+        }
+      }
+
+      .engine-banner__content__engine-sound {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          background-color: white;
+          outline: 2px solid @color_black_weak;
+          display: flex;
+          align-items: center;
+          padding: 12px 20px;
+
+          p {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin: 0;
+          }
+        
+          img {
+            position: relative;
+            margin-left: 10px;
+            width: 25px;
+            top: 2px;
+          }
+        }
+
+        button:hover {
+          cursor: pointer;
+          background-color: @color_black_weak;
+        }
+
+        button:hover p {
+          color: white;
+        }
+
+        button:hover img {
+          filter: invert(100%);
+        }
+      }
+    }
+  }
+}
+
+
 // ---------------------------------------------- MEDIA QUERIES
 
 @media screen and (max-width: 1220px) {
@@ -347,5 +463,9 @@
 
   .main-banner__background__left {
     padding-left: 20px;
+  }
+
+  .engine-banner__content {
+    padding-right: 20px;
   }
 }
