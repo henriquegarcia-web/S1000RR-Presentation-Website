@@ -290,7 +290,6 @@
       }
 
       .color-banner__content__card-right {
-        // outline: 2px solid rgb(170, 170, 170);
         margin-left: 100px;
 
         .color-banner__content__card__content {
@@ -474,6 +473,7 @@
   flex-direction: column;
   align-items: center;
   padding: 30px 0;
+  margin-bottom: 140px;
 
   .highlights-banner__title {
     width: 100%;
@@ -496,6 +496,7 @@
       font-size: 18px;
       font-weight: 300;
       text-transform: initial;
+      line-height: 1.5;
     }
   }
 
@@ -576,6 +577,235 @@
 
     .highlights-banner__caroussel__image:nth-of-type(4):hover {
       background-size: 130%;
+    }
+  }
+}
+
+// ---------------------------------------------- BANNER DE COMPRA
+
+.buy-banner {
+  position: relative;
+  display: flex;
+
+  .buy-banner__background {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .buy-banner__background__left {
+      position: relative;
+      width: 380px;
+      height: 100%;
+
+      .buy-banner__background__left--background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('/S1000RR_Presentation_Website/images/buy_banner/s1000rr-buy-banner.jpg');
+        background-position: center;
+        background-size: cover;
+        opacity: 0.1;
+      }
+
+      .buy-banner__background__left__img-red, .buy-banner__background__left__img-grey {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        
+        .img--container {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          height: fit-content;
+          padding-top: 20px;
+          margin-left: 80px;
+
+          .colors {
+            position: relative;
+            display: flex;
+            width: 100%;
+            padding-left: 75px;
+            top: -80px;
+
+            .color-1, .color-2, .color-3 {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              margin: 0 5px;
+              box-shadow: 0 0 10px rgba(219, 219, 219, 0.6);
+            }
+          }
+        }
+      }
+
+      .buy-banner__background__left__img-red {
+        .img--container {
+          .colors {
+            .color-1 {
+              background-color: @color_white;
+            }
+            .color-2 {
+              background-color: @color_red_weak;
+            }
+            .color-3 {
+              background-color: @color_black_weak;
+            }
+          }
+        }
+      }
+
+      .buy-banner__background__left__img-grey {
+        .img--container {
+          img {
+            top: -6px;
+          }
+        }
+        .colors {
+          .color-1 {
+            background-color: @color_white;
+          }
+          .color-2 {
+            background-color: @color_grey;
+          }
+          .color-3 {
+            background-color: @color_black_weak;
+          }
+        }
+      }
+    }
+
+    .buy-banner__background__right {
+      background-image: linear-gradient(to left, rgba(185, 185, 185, 0.1) , rgba(0, 0, 0, 0));
+      display: flex;
+      justify-content: flex-end;
+      width: calc(100% - 380px);
+      height: 100%;
+      padding-right: 20px;
+
+      .buy-banner__content {
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .buy-banner__content__text {
+          text-align: right;
+          margin-bottom: 60px;
+
+          p {
+            letter-spacing: 1px;
+          }
+
+          p:nth-of-type(1) {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+
+          p:nth-of-type(2) {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.5;
+          }
+        }
+
+        .buy-banner__content__price-container {
+          text-align: right;
+          margin-bottom: 60px;
+
+          p:nth-of-type(1) {
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 5px;
+          }
+
+          p:nth-of-type(2) {
+            font-size: 18px;
+            font-weight: 300;
+          }
+        }
+
+        .buy-banner__content__variations {
+          text-align: right;
+          margin-bottom: 60px;
+
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+          }
+
+          button {
+            outline: 2px solid @color_black_weak;
+            background: transparent;
+            font-size: 16px;
+            font-weight: 300;
+            padding: 8px 14px;
+            margin-left: 5px;
+          }
+
+          button:hover {
+            cursor: pointer;
+            background-color: @color_black_weak;
+            color: white;
+          }
+
+          .buy-banner__content__variations--color, .buy-banner__content__variations--extras, .buy-banner__content__variations--equipments {
+            margin-bottom: 20px;
+          }
+
+          .checked {
+            background-color: @color_black_weak;
+            color: white;
+          }
+        }
+
+        .buy-banner__content__button {
+          text-align: right;
+          display: flex;
+          justify-content: flex-end;
+
+          button {
+            background-color: white;
+            outline: 3px solid @color_black_weak;
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+  
+            p {
+              font-size: 18px;
+              font-weight: 400;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              margin: 0;
+            }
+          
+            img {
+              position: relative;
+              margin-left: 10px;
+              width: 25px;
+              top: 1px;
+            }
+          }
+  
+          button:hover {
+            cursor: pointer;
+            background-color: @color_black_weak;
+          }
+  
+          button:hover p {
+            color: white;
+          }
+  
+          button:hover img {
+            filter: invert(100%);
+          }
+        }
+      }
     }
   }
 }
