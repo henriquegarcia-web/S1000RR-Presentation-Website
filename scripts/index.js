@@ -2,7 +2,7 @@
   // await Promise.all([])
 
   new HoverCardColor().start()
-  new StartEngine().start()
+  new StartEngineSound().start()
 })()
 
 function HoverCardColor() {
@@ -10,22 +10,20 @@ function HoverCardColor() {
 
   this.start = () => {
     cardImageColors.forEach(img => img.addEventListener('mouseover', (ele) => {
-      const imgParent = ele.path[1]
-      const cardColorName = imgParent.querySelector('.color-banner__content__card__content__title')
+      const cardColorName = (ele.path[1]).querySelector('.color-banner__content__card__content__title')
   
       cardColorName.style.opacity = "1"
     }))
   
     cardImageColors.forEach(img => img.addEventListener('mouseout', (ele) => {
-      const imgParent = ele.path[1]
-      const cardColorName = imgParent.querySelector('.color-banner__content__card__content__title')
+      const cardColorName = (ele.path[1]).querySelector('.color-banner__content__card__content__title')
   
       cardColorName.style.opacity = "0"
     }))
   }
 }
 
-function StartEngine() {
+function StartEngineSound() {
   const startEngineSoundButton = document.getElementById('start_engine_sound')
   const startEngineSoundButtonText = startEngineSoundButton.querySelector('p')
   const engineSound = document.getElementById('engine_sound')
@@ -50,3 +48,19 @@ function StartEngine() {
     })
   }
 }
+
+const imageHighlight = document.querySelectorAll('.highlights-banner__caroussel__image')
+
+imageHighlight.forEach(img => img.addEventListener('mouseover', () => {
+  const imageHighlightDescription = img.querySelector('.highlights-banner__caroussel__image--description')
+
+  imageHighlightDescription.style.opacity = "1"
+}))
+
+imageHighlight.forEach(img => img.addEventListener('mouseout', () => {
+  const imageHighlightDescription = img.querySelector('.highlights-banner__caroussel__image--description')
+
+  imageHighlightDescription.style.opacity = "0"
+}))
+
+// e.preventDefault();
