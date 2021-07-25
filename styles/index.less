@@ -1,0 +1,166 @@
+@import "/S1000RR_Presentation_Website/styles/color-palet.less";
+
+// ---------------------------------------------- HEADER 
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  max-width: 1200px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+
+  .header__logo {
+    h1 {
+      color: @color_black_weak;
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
+
+  .header__menu {
+    ul {
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 5px;
+      padding: 8px;
+
+      a {
+        color: @color_black_weak;
+        font-size: 17px;
+        font-weight: 300;
+      }
+
+      .header__menu--selected {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .header__buttons {
+    display: flex;
+
+    .header__button__login, .header__button__theme {
+      font-size: 25px;
+      margin-left: 10px;
+      color: @color_black_weak;
+
+      .header__button__login__icon:hover, .header__button__theme__icon:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------- BANNER PRINCIPAL
+
+.section__main-banner {
+  display: flex;
+  justify-content: center;
+}
+
+.main-banner {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  position: relative;
+
+  .main-banner__background__left {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 360px);
+    height: 100%;
+
+    .main-banner__content__intro {
+      width: 70%;
+
+      .main-banner__content__intro__text {
+        p:nth-of-type(1) {
+          position: relative;
+          font-size: 60px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          left: -3px;
+        }
+
+        p:nth-of-type(2) {
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+
+        p:nth-of-type(3) {
+          font-size: 18px;
+          font-weight: 300;
+          letter-spacing: 1px;
+          text-align: justify;
+          line-height: 1.3;
+        }
+
+        .main-banner__content__intro__text--divisor {
+          background-color: @color_black_weak;
+          width: 60px;
+          height: 3px;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+
+  .main-banner__background__right {
+    // background-color: yellow;
+    position: relative; 
+    width: 360px;
+    height: 100%;
+
+    .main-banner__background__right--image {
+      background-image: url('/S1000RR_Presentation_Website/images/s1000rr-banner-01.jpg');
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      filter: blur(12px);
+      -webkit-filter: blur(12px);
+      opacity: 0.5;
+    }
+
+    .main-banner__content__image {
+      // background-color: @color_blue_weak;
+      // background-color: #7dbee680;
+      position: absolute;
+      display: flex;
+      align-items: center; 
+      width: 100%;
+      height: 100%;
+
+      img {
+        max-width: 400px;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  
+  .header {
+    padding: 0 20px;
+  }
+
+  .main-banner__background__left {
+    padding-left: 20px;
+  }
+}
