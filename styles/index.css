@@ -1,0 +1,729 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  color: #111111;
+  transition: 0.2s;
+}
+
+a {
+  text-decoration: none;
+}
+
+b {
+  font-weight: 400;
+}
+
+.banner {
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  margin-bottom: 50px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ----------------------------------------------- */
+
+.header {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.header .header__logo h1 {
+  color: #111111;
+  font-size: 32px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.header .header__menu ul {
+  display: flex;
+}
+.header .header__menu li {
+  list-style: none;
+  margin: 0 5px;
+  padding: 8px;
+}
+.header .header__menu li a {
+  color: #111111;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 6px 0;
+  transition: 0s;
+}
+.header .header__menu li a:hover {
+  border-bottom: 2px solid #111111;
+}
+.header .header__menu li .header__menu--selected {
+  font-weight: 400;
+  border-bottom: 2px solid #111111;
+}
+.header .header__buttons .header__button__login {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-left: 10px;
+  color: #111111;
+}
+.header .header__buttons .header__button__login p {
+  font-size: 17px;
+  font-weight: 300;
+  margin-right: 10px;
+}
+.header .header__buttons .header__button__login a {
+  font-weight: 400;
+}
+.header .header__buttons .header__button__login img {
+  width: 25px;
+}
+.header .header__buttons .header__button__login img:hover {
+  cursor: pointer;
+}
+.main-banner {
+  display: flex;
+  position: relative;
+}
+.main-banner .main-banner__background__left {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 360px);
+  height: 100%;
+}
+.main-banner .main-banner__background__left .main-banner__content__intro {
+  width: 70%;
+}
+.main-banner .main-banner__background__left .main-banner__content__intro .main-banner__content__intro__text p:nth-of-type(1) {
+  position: relative;
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  left: -3px;
+  margin-bottom: 5px;
+}
+.main-banner .main-banner__background__left .main-banner__content__intro .main-banner__content__intro__text p:nth-of-type(2) {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.main-banner .main-banner__background__left .main-banner__content__intro .main-banner__content__intro__text p:nth-of-type(3) {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 1.5;
+}
+.main-banner .main-banner__background__left .main-banner__content__intro .main-banner__content__intro__text .main-banner__content__intro__text--divisor {
+  background-color: #111111;
+  width: 60px;
+  height: 3px;
+  margin: 25px 0;
+}
+.main-banner .main-banner__background__right {
+  position: relative;
+  width: 360px;
+  height: 100%;
+}
+.main-banner .main-banner__background__right .main-banner__background__right--image {
+  background-image: url('/S1000RR_Presentation_Website/images/s1000rr-banner-01.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+.main-banner .main-banner__background__right .main-banner__content__image {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-56%);
+}
+.main-banner .main-banner__background__right .main-banner__content__image img {
+  max-width: 400px;
+  transition: 0.4s;
+}
+.main-banner .main-banner__background__right .main-banner__content__image img:hover {
+  transform: scale(1.1);
+}
+.color-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-banner .color-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.color-banner .color-banner__content .color-banner__content__title {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.color-banner .color-banner__content .color-banner__content__title p:nth-of-type(1) {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  left: -3px;
+  margin-bottom: 15px;
+}
+.color-banner .color-banner__content .color-banner__content__title p:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.color-banner .color-banner__content .color-banner__content__cards {
+  display: flex;
+  margin-top: 40px;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right {
+  position: relative;
+  width: 280px;
+  height: 450px;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__background,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('/S1000RR_Presentation_Website/images/s1000rr-grey.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 100%;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content img,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content img {
+  position: relative;
+  width: 400px;
+  left: -60px;
+  transition: 0.4s;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content img:hover,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content img:hover {
+  transform: scale(1.1);
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__title,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__title {
+  margin: 3px 0 30px 0;
+  transition: 0.4s;
+  opacity: 0;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__title p,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__title p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(180, 180, 180, 0.6);
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__title p:nth-last-of-type(2),
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__title p:nth-last-of-type(2) {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__colors,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 30px;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__colors .color-1,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-1,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__colors .color-2,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-2,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__colors .color-3,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-3 {
+  width: 30px;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0 5px;
+  box-shadow: 0 0 10px rgba(219, 219, 219, 0.6);
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__colors .color-1,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-1 {
+  background-color: #ffffff;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__colors .color-2,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-2 {
+  background-color: #5f5f5f;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-left .color-banner__content__card__content div .color-banner__content__card__content__colors .color-3,
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-3 {
+  background-color: #111111;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right {
+  margin-left: 100px;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content img {
+  width: 420px;
+  left: -65px;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-1 {
+  background-color: #ffffff;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-2 {
+  background-color: #e01d26;
+}
+.color-banner .color-banner__content .color-banner__content__cards .color-banner__content__card-right .color-banner__content__card__content div .color-banner__content__card__content__colors .color-3 {
+  background-color: #111111;
+}
+.engine-banner {
+  display: flex;
+  margin-bottom: 100px;
+}
+.engine-banner .engine-banner__background__left {
+  position: relative;
+  width: 300px;
+  height: 100%;
+}
+.engine-banner .engine-banner__background__left .engine-banner__background__left__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('/S1000RR_Presentation_Website/images/s1000rr-engine.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+.engine-banner .engine-banner__background__left .engine-banner__background__left__image {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.engine-banner .engine-banner__background__left .engine-banner__background__left__image img {
+  transition: 0.4s;
+}
+.engine-banner .engine-banner__background__left .engine-banner__background__left__image img:hover {
+  transform: scale(1.1);
+}
+.engine-banner .engine-banner__background__right {
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 300px);
+  height: 100%;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 660px;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__text p {
+  letter-spacing: 1px;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__text p:nth-of-type(1) {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 20px 0 15px 0;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__text p:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: justify;
+  text-align-last: right;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-specification {
+  background-image: linear-gradient(to left, rgba(185, 185, 185, 0.1), rgba(0, 0, 0, 0));
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-specification p {
+  margin: 0;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-specification p:nth-of-type(1) {
+  font-size: 18px;
+  font-weight: 300;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-specification p:nth-of-type(2) {
+  font-weight: 500;
+  font-size: 30px;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-specification .engine-banner__content__engine-specification--divisor {
+  background-color: #111111;
+  width: 2px;
+  height: 40%;
+  margin: 0 20px;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-sound {
+  display: flex;
+  justify-content: flex-end;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-sound button {
+  background-color: white;
+  outline: 2px solid #111111;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-sound button p {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-sound button img {
+  position: relative;
+  margin-left: 10px;
+  width: 25px;
+  top: 2px;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-sound button:hover {
+  cursor: pointer;
+  background-color: #111111;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-sound button:hover p {
+  color: white;
+}
+.engine-banner .engine-banner__background__right .engine-banner__content .engine-banner__content__engine-sound button:hover img {
+  filter: invert(100%);
+}
+.highlights-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  margin-bottom: 140px;
+}
+.highlights-banner .highlights-banner__title {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.highlights-banner .highlights-banner__title p {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.highlights-banner .highlights-banner__title p:nth-of-type(1) {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.highlights-banner .highlights-banner__title p:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: initial;
+  line-height: 1.5;
+}
+.highlights-banner .highlights-banner__caroussel {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: calc((100% / 3) - 10px);
+  height: 50%;
+  background-size: 100%;
+  background-position: center;
+  opacity: 0.6;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image .highlights-banner__caroussel__image--description {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image .highlights-banner__caroussel__image--description p:nth-of-type(1) {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image .highlights-banner__caroussel__image--description p:nth-of-type(2) {
+  color: #111111;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 1.3;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image:nth-of-type(1) {
+  background-image: url('/S1000RR_Presentation_Website/images/carousel/background_01');
+  margin: 0 10px 15px 0;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image:nth-of-type(2) {
+  background-image: url('/S1000RR_Presentation_Website/images/carousel/background_02');
+  margin: 0 5px 15px 5px;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image:nth-of-type(3) {
+  background-image: url('/S1000RR_Presentation_Website/images/carousel/background_03');
+  margin: 0 0 15px 10px;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image:nth-of-type(4) {
+  background-image: url('/S1000RR_Presentation_Website/images/carousel/background_04');
+  margin: 0 10px 0 0;
+  background-size: 120%;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image:nth-of-type(5) {
+  background-image: url('/S1000RR_Presentation_Website/images/carousel/background_05');
+  margin: 0 5px 0 5px;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image:nth-of-type(6) {
+  background-image: url('/S1000RR_Presentation_Website/images/carousel/background_06');
+  margin: 0 0 0 10px;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image:hover {
+  background-size: 110%;
+  opacity: 1;
+}
+.highlights-banner .highlights-banner__caroussel .highlights-banner__caroussel__image:nth-of-type(4):hover {
+  background-size: 130%;
+}
+.buy-banner {
+  position: relative;
+  display: flex;
+}
+.buy-banner .buy-banner__background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left {
+  position: relative;
+  width: 380px;
+  height: 100%;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left--background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('/S1000RR_Presentation_Website/images/buy_banner/s1000rr-buy-banner.jpg');
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red,
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red .img--container,
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .img--container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding-top: 20px;
+  margin-left: 80px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red .img--container .colors,
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .img--container .colors {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding-left: 75px;
+  top: -80px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red .img--container .colors .color-1,
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .img--container .colors .color-1,
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red .img--container .colors .color-2,
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .img--container .colors .color-2,
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red .img--container .colors .color-3,
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .img--container .colors .color-3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  box-shadow: 0 0 10px rgba(219, 219, 219, 0.6);
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red .img--container .colors .color-1 {
+  background-color: #ffffff;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red .img--container .colors .color-2 {
+  background-color: #e01d26;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-red .img--container .colors .color-3 {
+  background-color: #111111;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .img--container img {
+  top: -6px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .colors .color-1 {
+  background-color: #ffffff;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .colors .color-2 {
+  background-color: #5f5f5f;
+}
+.buy-banner .buy-banner__background .buy-banner__background__left .buy-banner__background__left__img-grey .colors .color-3 {
+  background-color: #111111;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right {
+  background-image: linear-gradient(to left, rgba(185, 185, 185, 0.1), rgba(0, 0, 0, 0));
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 380px);
+  height: 100%;
+  padding-right: 20px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__text {
+  text-align: right;
+  margin-bottom: 60px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__text p {
+  letter-spacing: 1px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__text p:nth-of-type(1) {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__text p:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__price-container {
+  text-align: right;
+  margin-bottom: 60px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__price-container p:nth-of-type(1) {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__price-container p:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: 300;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__variations {
+  text-align: right;
+  margin-bottom: 60px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__variations p {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__variations button {
+  outline: 2px solid #111111;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 8px 14px;
+  margin-left: 5px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__variations button:hover {
+  cursor: pointer;
+  background-color: #111111;
+  color: white;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__variations .buy-banner__content__variations--color,
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__variations .buy-banner__content__variations--extras,
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__variations .buy-banner__content__variations--equipments {
+  margin-bottom: 20px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__variations .checked {
+  background-color: #111111;
+  color: white;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__button {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__button button {
+  background-color: white;
+  outline: 3px solid #111111;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__button button p {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__button button img {
+  position: relative;
+  margin-left: 10px;
+  width: 25px;
+  top: 1px;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__button button:hover {
+  cursor: pointer;
+  background-color: #111111;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__button button:hover p {
+  color: white;
+}
+.buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__button button:hover img {
+  filter: invert(100%);
+}
+@media screen and (max-width: 1220px) {
+  .header {
+    padding: 0 20px;
+  }
+  .main-banner__background__left {
+    padding-left: 20px;
+  }
+  .engine-banner__content {
+    padding-right: 20px;
+  }
+}
