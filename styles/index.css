@@ -716,6 +716,96 @@ b {
 .buy-banner .buy-banner__background .buy-banner__background__right .buy-banner__content .buy-banner__content__button button:hover img {
   filter: invert(100%);
 }
+
+#section__footer {
+  background-color: rgb(245, 245, 245);
+  margin-top: 100px;
+}
+#section__footer .footer {
+  display: flex;
+  justify-content: space-between;
+  height: 220px;
+  width: 100%;
+  max-width: 1200px;
+}
+#section__footer .footer .footer__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+}
+#section__footer .footer .footer__logo h1 {
+  color: #111111;
+  font-size: 32px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+#section__footer .footer .footer__logo p {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#section__footer .footer .footer__menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+}
+#section__footer .footer .footer__menus ul {
+  list-style: none;
+  text-align: center;
+}
+#section__footer .footer .footer__menus li {
+  margin-bottom: 5px;
+}
+#section__footer .footer .footer__menus li .footer__menu--selected {
+  font-weight: 400;
+}
+#section__footer .footer .footer__menus a {
+  font-size: 17px;
+  font-weight: 300;
+}
+#section__footer .footer .footer__credits {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+}
+#section__footer .footer .footer__credits .header__button__login {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-left: 10px;
+  color: #111111;
+  margin-bottom: 14px;
+}
+#section__footer .footer .footer__credits .header__button__login p {
+  font-size: 17px;
+  font-weight: 300;
+  margin-right: 10px;
+}
+#section__footer .footer .footer__credits .header__button__login a {
+  font-weight: 400;
+}
+#section__footer .footer .footer__credits .header__button__login img {
+  width: 25px;
+}
+#section__footer .footer .footer__credits .header__button__login img:hover {
+  cursor: pointer;
+}
+#section__footer .footer .footer__credits a {
+  font-weight: 300;
+}
+
 @media screen and (max-width: 1220px) {
   .header {
     padding: 0 20px;
