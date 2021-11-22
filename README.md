@@ -1,6 +1,6 @@
 ### S1000RR - Website de apresentação
 
-> Desenvolvedor: Henrique Garcia
+> Desenvolvedor: Henrique Garcia <br>
 > Website: <a href="https://henriquegarcia-web.github.io/S1000RR-Presentation-Website/" target="_blank">Visualizar</a>
 
 #### Imagens:
